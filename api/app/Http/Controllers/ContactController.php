@@ -46,6 +46,6 @@ class ContactController extends Controller
 
     public function show()
     {
-        return $this->contact->get(['name', 'email', 'phone']);
+        return $this->contact->get(['id', 'name', 'email', 'phone']);
     }
 }

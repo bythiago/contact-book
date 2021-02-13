@@ -82,6 +82,8 @@ export default {
             text: 'Hello user! This is a notification!',
             type: 'success'
           })
+
+          this.$router.push('contatos')
         }).catch(function (error) {
           Vue.notify({
             group: 'foo',

@@ -16,43 +16,23 @@
       >
         <q-scroll-area style="height: calc(100% - 150px); margin-top: 150px; border-right: 1px solid #ddd">
           <q-list padding>
-            <q-item clickable v-ripple>
+            <q-item to="/" clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="inbox" />
+                <q-icon name="add_circle_outline" />
               </q-item-section>
 
               <q-item-section>
-                Inbox
+                Cadastrar
               </q-item-section>
             </q-item>
 
-            <q-item active clickable v-ripple>
+            <q-item to="contatos" active clickable v-ripple>
               <q-item-section avatar>
-                <q-icon name="star" />
+                <q-icon name="face" />
               </q-item-section>
 
               <q-item-section>
-                Star
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple>
-              <q-item-section avatar>
-                <q-icon name="send" />
-              </q-item-section>
-
-              <q-item-section>
-                Send
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple>
-              <q-item-section avatar>
-                <q-icon name="drafts" />
-              </q-item-section>
-
-              <q-item-section>
-                Drafts
+                Contatos
               </q-item-section>
             </q-item>
           </q-list>
@@ -71,7 +51,7 @@
 
       <q-page-container>
         <q-page padding>
-          <Index></Index>
+          <router-view />
         </q-page>
       </q-page-container>
     </q-layout>
@@ -80,13 +60,8 @@
 
 <script>
 
-import Index from '../pages/Index'
-
 export default {
   name: 'MainLayout',
-  components: {
-    Index
-  },
   data () {
     return {
       drawer: false
