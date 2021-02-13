@@ -14,3 +14,6 @@
 */
 
 $router->post('/contacts', 'ContactController@index');
+$router->get('/contacts', 'ContactController@show');
+
+//https://galib-rabib.medium.com/how-to-fix-cors-error-in-lumen-api-services-ba5a62d23507

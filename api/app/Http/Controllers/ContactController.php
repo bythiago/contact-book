@@ -43,4 +43,9 @@ class ContactController extends Controller
             return response()->json($e->getMessage(), 500);
         }
     }
+
+    public function show()
+    {
+        return $this->contact->get(['name', 'email', 'phone']);
+    }
 }
