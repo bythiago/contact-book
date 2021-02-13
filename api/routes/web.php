@@ -13,6 +13,7 @@
 |
 */
 
+$router->get('', 'ContactController@show');
 $router->post('/contacts', 'ContactController@index');
 $router->get('/contacts', 'ContactController@show');
 

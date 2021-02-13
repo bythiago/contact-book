@@ -82,8 +82,9 @@ export default {
             text: 'Hello user! This is a notification!',
             type: 'success'
           })
-
-          this.$router.push('contatos')
+          setInterval(function () {
+            window.location.href = '/#/contatos'
+          }, 1000)
         }).catch(function (error) {
           Vue.notify({
             group: 'foo',
@@ -107,7 +108,6 @@ export default {
     Vue.use(Notifications)
   },
   mounted () {
-    axios.get('http://192.168.1.10:8000/contacts').then(response => (this.data = response.data))
   }
 }
 </script>
